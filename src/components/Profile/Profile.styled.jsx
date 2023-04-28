@@ -1,4 +1,7 @@
-.profile {
+import styled from 'styled-components';
+
+
+export const UserProfile = styled.div`
   position: absolute;
   top: 50%;
   left: 50%;
@@ -7,34 +10,39 @@
   width: 300px;
   margin: 0 auto;
   background-color: #fff;
-}
+`;
 
-.description {
+export const Description = styled.div`
   text-align: center;
   padding: 42px;
-}
+`;
 
-.avatar {
+export const Avatar = styled.img`
   display: block;
   margin: 0 auto;
   width: 102px;
   border-radius: 50%;
   margin-bottom: 10px;
-}
-.name {
+  `; 
+
+export const UserName = styled.p`
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 10px;
-}
+`;
 
-.tag,
-.location {
-  font-size: 14px;
-  color: gray;
-  margin-bottom: 10px;
-}
+const stylesForTagLocation = {
+  "font-size": '14px',
+  color: 'gray',
+  "margin-bottom": '10px',
+};
 
-.stats {
+
+export const UserTag = styled.p(stylesForTagLocation); 
+
+export const UserLocation = styled.p(stylesForTagLocation); 
+
+export const Stats = styled.ul`
   display: flex;
   justify-content: center;
   gap: 20px;
@@ -42,21 +50,21 @@
   text-align: center;
   margin: 0 auto;
   background-color: #c4ced8;
-}
+`; 
 
-.stats > li {
+export const StatsItem = styled.li`
   flex-basis: calc((100% - 40px) / 3);
   padding-top: 20px;
   padding-bottom: 20px;
-}
+`;
 
-.label {
+export const Label = styled.span`
   display: block;
   color: gray;
   font-size: 12px;
   margin-bottom: 5px;
-}
-.quantity {
+`;
+
+export const Quantity = styled.span`
   display: block;
-  font-weight: 500;
-}
+  font-weight: 500;`; 

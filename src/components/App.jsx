@@ -1,5 +1,6 @@
 import user from 'data/user';
-import { Profile } from "components/Profile/Profile";
+import { Profile } from './Profile/Profile';
+
 
 export const App = () => 
    (<Profile
@@ -9,3 +10,5 @@ export const App = () =>
     avatar={user.avatar}
     stats={user.stats}
   />);
+
+  
