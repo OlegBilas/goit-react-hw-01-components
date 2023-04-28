@@ -2,13 +2,14 @@ import styled from 'styled-components';
 
 
 export const UserProfile = styled.div`
-  position: absolute;
+  /* position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  left: 50%; */
+  /* transform: translate(-50%, -50%); */
 
   width: 300px;
-  margin: 0 auto;
+  margin: 20px auto;
+
   background-color: #fff;
 `;
 
