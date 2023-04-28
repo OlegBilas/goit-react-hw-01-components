@@ -1,36 +1,29 @@
 import PropTypes from 'prop-types';
-import {
-  Statistic,
-  Title,
-  Stats,
-  StatsItem,
-  Label,
-  Percentage,
-} from './FriendListItem.styled';
+import { FriendListItem } from './FriendListItem/FriendListItem';
+import { FriendListStyled } from './FriendList.styled';
 
-export const Statistics = ({ title, stats }) => {
+export const FriendList = ({ friends }) => {
   return (
-    <Statistic>
-      {title && <Title>{title}</Title>}
-      <Stats>
-        {stats.map(({ id, label, percentage }) => (
-          <StatsItem key={id} style={{ backgroundColor: getRandomHexColor() }}>
-            <Label>{label}</Label>
-            <Percentage>{percentage}</Percentage>
-          </StatsItem>
-        ))}
-      </Stats>
-    </Statistic>
+    <FriendListStyled>
+      {friends.map(({ avatar, name, isOnline, id }) => (
+        <FriendListItem
+          key={id}
+          avatar={avatar}
+          name={name}
+          isOnline={isOnline}
+        />
+      ))}
+    </FriendListStyled>
   );
 };
 
-Statistics.propTypes = {
-  title: PropTypes.string,
-  stats: PropTypes.arrayOf(
+FriendList.propTypes = {
+  friends: PropTypes.arrayOf(
     PropTypes.exact({
-      id: PropTypes.string.isRequired,
-      label: PropTypes.string.isRequired,
-      percentage: PropTypes.number.isRequired,
+      id: PropTypes.number.isRequired,
+      avatar: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      isOnline: PropTypes.bool.isRequired,
     })
   ),
 };
