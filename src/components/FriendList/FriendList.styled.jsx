@@ -1,43 +1,6 @@
 import styled from 'styled-components';
 
-export const Statistic = styled.section`
-  width: 300px;
+export const FriendListStyled = styled.ul`
   margin: 20px auto;
-  margin: 0 auto;
-  background-color: #fff;
-`;
-
-export const Title = styled.h2`
-  font-size: 20px;
-  font-weight: 700;
-  padding: 20px;
-  text-align: center;
-`;
-
-export const Stats = styled.ul`
-  display: flex;
-  justify-content: center;
-  /* gap: 20px; */
-  width: 100%;
-  text-align: center;
-  margin: 0 auto;
-  background-color: #c4ced8;
-`;
-
-export const StatsItem = styled.li`
-  flex-basis: calc(100% / 4);
-  padding-top: 20px;
-  padding-bottom: 20px;
-`;
-
-export const Label = styled.span`
-  display: block;
-  color: #000000;
-  font-size: 12px;
-  margin-bottom: 5px;
-`;
-
-export const Percentage = styled.span`
-  display: block;
-  font-weight: 500;
+  width: 300px;
 `;

@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { FriendListItem } from './FriendListItem/FriendListItem';
+import { FriendListItem } from '../FriendListItem/FriendListItem';
 import { FriendListStyled } from './FriendList.styled';
 
 export const FriendList = ({ friends }) => {
@@ -27,7 +27,3 @@ FriendList.propTypes = {
     })
   ),
 };
-
-function getRandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-}

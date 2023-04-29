@@ -1,43 +1,33 @@
 import styled from 'styled-components';
 
-export const Statistic = styled.section`
-  width: 300px;
-  margin: 20px auto;
-  margin: 0 auto;
-  background-color: #fff;
-`;
-
-export const Title = styled.h2`
-  font-size: 20px;
-  font-weight: 700;
-  padding: 20px;
-  text-align: center;
-`;
-
-export const Stats = styled.ul`
+export const FriendItem = styled.li`
   display: flex;
-  justify-content: center;
-  /* gap: 20px; */
-  width: 100%;
-  text-align: center;
-  margin: 0 auto;
-  background-color: #c4ced8;
+  justify-content: start;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 20px;
+  background-color: #ffffff;
 `;
 
-export const StatsItem = styled.li`
-  flex-basis: calc(100% / 4);
-  padding-top: 20px;
-  padding-bottom: 20px;
+const getBackgroundColor = ({ isOnline }) => {
+  return isOnline ? 'green' : 'red';
+};
+
+export const Status = styled.span`
+  width: 10px;
+  height: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background-color: ${getBackgroundColor};
 `;
 
-export const Label = styled.span`
-  display: block;
-  color: #000000;
-  font-size: 12px;
-  margin-bottom: 5px;
+export const Avatar = styled.img`
+  border-radius: 5px;
+  margin-right: 10px;
 `;
 
-export const Percentage = styled.span`
-  display: block;
+export const Name = styled.p`
+  font-size: 20px;
   font-weight: 500;
 `;

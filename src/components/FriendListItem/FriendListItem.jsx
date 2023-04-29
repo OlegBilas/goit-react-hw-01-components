@@ -1,40 +1,20 @@
-import PropTypes from 'prop-types';
-import {
-  Statistic,
-  Title,
-  Stats,
-  StatsItem,
-  Label,
-  Percentage,
-} from './FriendListItem.styled';
+// import PropTypes from 'prop-types';
+import { FriendItem, Status, Avatar, Name } from './FriendListItem.styled';
 
-export const Statistics = ({ title, stats }) => {
+export const FriendListItem = ({ avatar, name, isOnline, id }) => {
   return (
-    <Statistic>
-      {title && <Title>{title}</Title>}
-      <Stats>
-        {stats.map(({ id, label, percentage }) => (
-          <StatsItem key={id} style={{ backgroundColor: getRandomHexColor() }}>
-            <Label>{label}</Label>
-            <Percentage>{percentage}</Percentage>
-          </StatsItem>
-        ))}
-      </Stats>
-    </Statistic>
+    <FriendItem key={id}>
+      <Status isOnline={isOnline}></Status>
+      <Avatar src={avatar} alt="User avatar" width="48" />
+      <Name>{name}</Name>
+    </FriendItem>
   );
 };
 
-Statistics.propTypes = {
-  title: PropTypes.string,
-  stats: PropTypes.arrayOf(
-    PropTypes.exact({
-      id: PropTypes.string.isRequired,
-      label: PropTypes.string.isRequired,
-      percentage: PropTypes.number.isRequired,
-    })
-  ),
-};
-
-function getRandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-}
+// Типи пропів явно описані в компоненті FriendList.jsx (проп friends)
+// FriendListItem.propTypes = {
+//   avatar: PropTypes.string.isRequired,
+//   name: PropTypes.string.isRequired,
+//   isOnline: PropTypes.bool.isRequired,
+//   id: PropTypes.number.isRequired,
+// };
