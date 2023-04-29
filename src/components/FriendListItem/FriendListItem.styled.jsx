@@ -14,8 +14,8 @@ const getBackgroundColor = ({ isOnline }) => {
 };
 
 export const Status = styled.span`
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   margin-left: 10px;
   margin-right: 10px;
   border-radius: 50%;

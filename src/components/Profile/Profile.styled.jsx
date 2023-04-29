@@ -39,7 +39,6 @@ export const UserLocation = styled.p(stylesForTagLocation);
 export const Stats = styled.ul`
   display: flex;
   justify-content: center;
-  gap: 20px;
   width: 100%;
   text-align: center;
   margin: 0 auto;
@@ -47,9 +46,10 @@ export const Stats = styled.ul`
 `;
 
 export const StatsItem = styled.li`
-  flex-basis: calc((100% - 40px) / 3);
+  flex-basis: calc(100% / 3);
   padding-top: 20px;
   padding-bottom: 20px;
+  border: 1px solid #0000005e;
 `;
 
 export const Label = styled.span`

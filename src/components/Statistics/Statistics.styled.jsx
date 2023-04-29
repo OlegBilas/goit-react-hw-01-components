@@ -11,6 +11,7 @@ export const Title = styled.h2`
   font-size: 20px;
   font-weight: 700;
   padding: 20px;
+  text-transform: uppercase;
   text-align: center;
 `;
 
@@ -32,12 +33,12 @@ export const StatsItem = styled.li`
 
 export const Label = styled.span`
   display: block;
-  color: #000000;
   font-size: 12px;
   margin-bottom: 5px;
 `;
 
 export const Percentage = styled.span`
   display: block;
+  font-size: 16px;
   font-weight: 500;
 `;
