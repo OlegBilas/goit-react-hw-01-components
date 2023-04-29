@@ -5,6 +5,7 @@ export const UserProfile = styled.div`
   margin: 20px auto;
 
   background-color: #ffffff;
+  border-radius: 5px;
 `;
 
 export const Description = styled.div`
